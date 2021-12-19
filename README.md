@@ -9,17 +9,13 @@ Hier werden einige Tipps, Tricks und Kniffe erläutert um euren Druck zu Optimie
 
 Wir ändern Ständig Dinge also schadet es nicht ab und an nochmal neu nachzuschauen.
 
-If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
+Bei Fragen und/oder Anregungen meldet euch gerne auf unserem Discord: [Hier gehts zum Discord](https://discord.gg/5dkKBWZ4RM)
 
-You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
 
-Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
-
-# Table of Contents
-- **Before We Begin**
-    - [**(!) Important Checks**](#-important-checks)
+# Inhaltsverzeichniss
+- **Bevor wir Starten**
+    - [**(!) Wichtige Checks**](#-Wichtige-Checks)
     - [A Note About Line Width](#a-note-about-line-width)
 - **Print Tuning**
     - [First Layer Squish](#first-layer-squish)
@@ -76,28 +72,23 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Slicer is Putting Heating G-codes in the Wrong Place/Order](#slicer-is-putting-heating-g-codes-in-the-wrong-placeorder)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
 
-# Before We Begin
+# Bevor wir Starten
 
-## (!) Important Checks
-Before you follow *any* tuning methods in this guide, ensure that:
-- Your nozzle is clean.
-- Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
-- **(!) Your nozzle is not partially clogged.**
-    - If your nozzle is partially clogged, you may not even notice. You may be able to print, but you will have an **extremely difficult time trying to tune**.
-        - Ensure that you can easily extrude by hand with the filament latch open.
-        - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
+## (!) Wichtige Checks
+Bevor du Irgendwelche Tipps hier Befolgst, gehe Sicher das:
+- Deine Düse sauber ist.
+- Deine Düse Festgezogen ist **Heiß Angezogen** und kein Material am Düsengewinde oder am Heatbreak ausläuft.
+- **(!) Deine Düse nicht Teilverstopfungen aufweiset.**
+    - Eine Teilverstopfung der Düse wird nicht immer direkt erkannt. Du bist zwar in der Lage zu drucken aber **wirst erhebliche Probleme beim Einstellen des Druckers haben**.
+        - Stelle Sicher das du Filament locker mit der Hand durch die Düse Extrudieren kannst wärend du den Extruder Spannhebel offen hältst.
+        - Stelle Sicher das das Extrudierte Material gerade nach unten fällt wenn du in der Freien Luft Extrudierst. Es sollte nicht zur Seite schießen
 
-- Your thermistors are the correct types in your config. Please double check them.
-    - **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
-
-        - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
-
-            - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [here](#error-command-format-mismatch).
-
-- **(!) Everything is tight (seriously, check again)**
-    - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
-    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
-- Your motion components are clean, particularly between gear/pulley/idler teeth.
+- **(!) Ist alles Fest. (seriously, checkt das Leute)**
+    - Schaut euch den Drucker Nochmal Genau an und festigt *Jede einzelne Schraube* die du finden kannst, *vorallem* an gewindestangen, Führungen, Druckkopf, Kupplungen und Motoren. 
+    - Auch wenn es Bescheuert klingt, ich mache das Regelmäßig und finde immer mal wieder etwas was sich losgerappelt hat, solche kleinen dinge führen zu fehlern die oft *extrem* schwer zu finden sind.
+- Dein Drucker Sauber und Gut Geschmiert ist.Es Sollten keine Filamentreste irgendwoh zwischen Riemen oder Riemenscheiben sitzen. Fett sollte nicht auf Spindeln oder Führungen Verharzen und immer mal erneuert werden.
+- Riemenspannung und Abnutzung der Riemen sollte im Auge behalten werden.
+- Ist alles Gerade Zusammen gebaut? Stehen die Achsen Winklig zueinander. 
 
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
