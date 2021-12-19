@@ -1,14 +1,14 @@
 # Introduction
 
-Much of this guide is specific to CoreXY/Voron printers running Klipper.
+Willkommen iM Pfusch-Discord Wiki
 
-Some of the troubleshooting/tuning information focuses on CoreXY (sorry, Switchwire folks).
+Hier werden einige Tipps, Tricks und Kniffe erläutert um euren Druck zu Optimieren.
 
-**(!) Please pay special attention to anything bolded and marked with "(!)"**
 
-My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+**(!) Bitte lest euch dinge die so Makiert sind nochmal Extra durch und Beachtet diese Explezit. "(!)"**
 
-I am adding new information all the time, be sure to check back.\
+Wir ändern Ständig Dinge also schadet es nicht ab und an nochmal neu nachzuschauen.
+
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 
 You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
